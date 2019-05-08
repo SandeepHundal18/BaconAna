@@ -11,7 +11,7 @@ namespace baconhep
       TGenEventInfo():
       id_1(0),  id_2(0),
       x_1(0),   x_2(0),
-      scalePDF(0), xs(0), weight(1)
+      scalePDF(0), xs(0), weight(1), lheweight(1)
       {}
       ~TGenEventInfo(){}
 
@@ -20,6 +20,7 @@ namespace baconhep
       float scalePDF;      // Q-scale used for PDF evaluation
       float xs;            // cross section from LHE file
       float weight;        // generator-level event weight
+      std::vector<double>  lheweight;	   //lhe weight
 
     ClassDef(TGenEventInfo,3)
   };
